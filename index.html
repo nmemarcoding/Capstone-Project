@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery-Plus Product Ordering Page</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- JavaScript File -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <!-- Changed logo image to text -->
+            <div class="logo">Bakery-Plus</div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#">Rewards</a></li>
+                <li><a href="#">Login</a></li>
+                <!-- Cart Button with onclick event -->
+                <li>
+                    <a href="#" class="cart-button" onclick="toggleCartModal()" style="color: black; text-decoration: none; background-color: #f8f8f8; padding: 10px; border-radius: 5px; display: inline-block;">
+                        🛒 Cart (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="background: linear-gradient(to right, rgba(255, 204, 153, 0.8), rgba(255, 153, 102, 0.8)), url('https://images.unsplash.com/photo-1558021212-51b6ecfa0db2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') center/cover no-repeat; color: white; padding: 100px 20px; text-align: center;">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 3rem; margin-bottom: 20px; font-weight: 600;">Welcome to Bakery-Plus</h1>
+                <p style="font-size: 1.5rem; margin-bottom: 30px; font-weight: 300;">Freshly baked goods delivered to your doorstep with a touch of love and warmth</p>
+                <a href="#products" class="hero-button" style="background-color: #FF6347; color: white; padding: 15px 30px; border-radius: 25px; font-size: 1.2rem; text-decoration: none; transition: background-color 0.3s ease;">
+                    Shop Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section class="product-section" id="products">
+            <h2>Today's Specials</h2>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chocolate Cake" style="width: auto; height: 300px;">
+                    <h3>Chocolate Cake</h3>
+                    <p>$15.00</p>
+                    <button onclick="addToCart('Chocolate Cake', 15.00)">Add to Cart</button>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <img src="https://www.ambitiouskitchen.com/wp-content/uploads/2020/07/blueberrymuffins-4.jpg" alt="Blueberry Muffin" style="width: auto; height: 300px;">
+                    <h3>Blueberry Muffin</h3>
+                    <p>$2.75</p>
+                    <button onclick="addToCart('Blueberry Muffin', 2.75)">Add to Cart</button>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <img src="https://simplyscrumptiouseats.com/wp-content/uploads/2022/03/easy-baguette-bread.jpg" alt="Baguette" style="width: auto; height: 300px;">
+                    <h3>Baguette</h3>
+                    <p>$2.00</p>
+                    <button onclick="addToCart('Baguette', 2.00)">Add to Cart</button>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </section>
+
+        <!-- Checkout Section -->
+        <section class="checkout-section">
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+            <div class="checkout-actions">
+                <button class="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Bakery-Plus | All Rights Reserved</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com"><span>Facebook</span></a>
+                <a href="https://www.twitter.com"><span>Twitter</span></a>
+                <a href="https://www.instagram.com"><span>Instagram</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="toggleCartModal()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="modal-cart-items">
+                <!-- Cart items will be dynamically injected here -->
+            </div>
+            <div class="modal-actions">
+                <button class="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

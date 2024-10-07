@@ -1,0 +1,331 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6347;
+    padding: 1rem 2rem;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.cart-button {
+    background-color: #fff;
+    color: #ff6347;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cart-button:hover {
+    background-color: #e5533d;
+    color: #fff;
+}
+
+.cart-button i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive Navbar */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+/* Hero Button Hover Effect */
+.hero-button:hover {
+    background-color: #e5533d;
+}
+
+/* Product Section */
+.product-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.product-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #fdfdfd;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #ff6347;
+    font-weight: 600;
+}
+
+.product-card button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.product-card button:hover {
+    background-color: #e5533d;
+}
+
+/* Checkout Section Styling */
+.checkout-section {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.checkout-section h2 {
+    font-size: 2.5rem;
+    color: #3e2723;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    margin: 20px 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.cart-item button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #e5533d;
+}
+
+.cart-total {
+    font-size: 1.5rem;
+    color: #3e2723;
+    margin: 20px 0;
+}
+
+.checkout-button {
+    background-color: #e5533d;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #6b3e1e;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+}
+
+.social-media a {
+    color: #fff;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #ff6347;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-actions {
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #ff6347;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
